@@ -1,0 +1,13 @@
+package com.ny.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MvnSpringBootApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MvnSpringBootApplication.class, args);
+	}
+
+}
