@@ -59,6 +59,12 @@
 				</configuration>
 				<executions>
 					<execution>
+						<id>build-info-goals</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+					<execution>
 						<id>pre-it</id>
 						<goals>
 							<goal>start</goal>
@@ -73,6 +79,25 @@
 				</executions>
 			</plugin>
 		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>io.packagecloud.maven.wagon</groupId>
+				<artifactId>maven-packagecloud-wagon</artifactId>
+				<version>0.0.6</version>
+			</extension>
+		</extensions>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>packagecloud-release</id>
+			<url>packagecloud+https://packagecloud.io/nur/release</url>
+		</repository>
+		<snapshotRepository>
+			<id>packagecloud-snapshot</id>
+			<url>packagecloud+https://packagecloud.io/nur/snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
