@@ -89,15 +89,25 @@
 		</extensions>
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>packagecloud-release</id>
-			<url>packagecloud+https://packagecloud.io/nur/release</url>
-		</repository>
-		<snapshotRepository>
-			<id>packagecloud-snapshot</id>
-			<url>packagecloud+https://packagecloud.io/nur/snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
+
+
+	<profiles>
+		<profile>
+			<id>packagecloud-default</id>
+			<distributionManagement>
+				<repository>
+					<id>packagecloud-release</id>
+					<url>packagecloud+https://packagecloud.io/nur/release</url>
+				</repository>
+				<snapshotRepository>
+					<id>packagecloud-snapshot</id>
+					<url>packagecloud+https://packagecloud.io/nur/snapshot</url>
+				</snapshotRepository>
+			</distributionManagement>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
 
 </project>
