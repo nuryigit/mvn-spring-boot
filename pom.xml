@@ -78,6 +78,22 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.example</groupId>
+				<artifactId>MvnPlugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<greeting>Welcome Nur!</greeting>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>hi</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 
 		<extensions>
